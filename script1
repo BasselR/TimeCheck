@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo "Please enter two-digit hour (on 24 hour scale)"
+echo "examples: 00, 01, 02, ..., 23"
+read input
+echo "................."
+x=`date`
+hour="${x:11:2}"
+if [ $hour == $input ]
+then
+	echo "Good answer"
+	echo "The hour is $hour"
+
+else
+	echo "Bad answer"
+	echo "your answer: $input, real hour: $hour"
+fi
+
